@@ -1,0 +1,21 @@
+html
+body {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    font-family: 'Open Sans Condensed', sans-serif;
+    /* background: linear-gradient(to right, rgb(199, 199, 199), rgb(65, 61, 61)) */
+    
+    }
+.ytp-pause-overlay-container,
+.ytp-pause-overlay {
+    display: none !important;
+}
+
+.ytplayer {pointer-events: none !important;}
+

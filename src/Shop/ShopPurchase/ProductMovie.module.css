@@ -1,0 +1,107 @@
+.wholeProduct {
+    display: grid;
+    grid-template-rows: 85% 15%;
+
+    grid-template-rows: 80% 20%;
+   
+    width: 70%;
+    height: 90%;
+    margin-top: 20px;
+    margin-left: 50px;
+    flex-direction: row;
+    justify-self: center;
+    cursor: pointer;
+
+}
+
+.image {}
+
+.imageTitle {
+    object-fit: scale-down
+}
+
+.hoverButton {
+    z-index: 99;
+}
+
+.details {
+
+    display: grid;
+    grid-template-rows: 60% 40%;
+}
+
+.bookTitle {
+
+    text-overflow: ellipsis;
+}
+
+.movieTitle {
+    font-size: 20px;
+
+}
+
+.truncate {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    font-size: 21;
+}
+
+.formularButton {
+    padding: 15px 40px;
+    background: #000;
+    border: 0;
+    color: #fff;
+    text-transform: uppercase;
+    font-family: helvetica;
+    font-size: 12px;
+    letter-spacing: 3px;
+    position: relative;
+    transition: all .4s cubic-bezier(0.645, 0.045, 0.355, 1);
+    cursor: pointer;
+
+
+
+}
+
+
+.formularButton::after,
+.formularButton::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    right: 0px;
+    transform: translateY(-50%);
+    opacity: 0;
+    transition: all .4s cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+
+.formularButton::after {
+    width: 30px;
+    height: 1px;
+    background: white;
+    transform: translateX(-3px);
+    margin-top: 0px;
+}
+
+.formularButton::before {
+    content: "";
+    transform: rotate(-135deg) translateX(50%);
+    width: 11px;
+    height: 11px;
+    background: transparent;
+    border-left: 1px solid white;
+    border-bottom: 1px solid white;
+    margin-top: -1px;
+}
+
+
+.formularButton:hover {
+    padding: 15px 60px 15px 20px;
+}
+
+.formularButton:hover::after,
+.formularButton:hover::before {
+    opacity: 1;
+    right: 15px;
+}

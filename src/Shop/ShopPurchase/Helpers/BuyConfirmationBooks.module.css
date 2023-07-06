@@ -1,0 +1,185 @@
+.formularButton {
+    padding: 15px 40px;
+    background: #000000;
+    border: 0;
+    color: #fff;
+    text-transform: uppercase;
+    font-family: helvetica;
+    font-size: 12px;
+    letter-spacing: 3px;
+    position: relative;
+    transition: all .4s cubic-bezier(0.645, 0.045, 0.355, 1);
+    cursor: pointer;
+    width: 50%;
+    height: 50%;
+    justify-self: center;
+    align-self: center;
+
+
+}
+
+.formularButton::after,
+.formularButton::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    right: 0px;
+    transform: translateY(-50%);
+    opacity: 0;
+    transition: all .4s cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+
+.formularButton::after {
+    width: 30px;
+    height: 1px;
+    background: white;
+    transform: translateX(-3px);
+    margin-top: 0px;
+}
+
+.formularButton::before {
+    content: "";
+    transform: rotate(-135deg) translateX(50%);
+    width: 11px;
+    height: 11px;
+    background: transparent;
+    border-left: 1px solid white;
+    border-bottom: 1px solid white;
+    margin-top: -1px;
+}
+
+
+.formularButton:hover {
+    padding: 15px 60px 15px 20px;
+}
+
+.formularButton:hover::after,
+.formularButton:hover::before {
+    opacity: 1;
+    right: 15px;
+}
+
+.container {
+    display: grid;
+    grid-template-rows: 0.2fr 2fr 1fr;
+    width: 65%;
+        height: 75%;
+    justify-self: center;
+    align-self: center;
+    background: linear-gradient(to right, rgb(67, 67, 67), rgb(60, 54, 54));
+        color: rgb(237, 208, 208);
+        z-index: 99;
+    
+}
+
+.description {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    justify-content: center;
+        align-items: center;
+
+
+}
+
+.confirmation {
+    display: grid;
+    
+}
+
+.image {
+    background: blue;
+}
+
+
+
+.details {
+font-size: 35px;
+
+    text-align: left;
+    align-self: center;
+    
+}
+
+.backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    z-index: 1;
+    background: rgba(0, 0, 0, 0.75);
+    display: flex;
+    align-items: center;
+    /* Vertically center the container */
+    justify-content: center;
+    /* Horizontally center the container */
+}
+
+.closeContainer {
+
+    margin-right: 10px;
+    width: 30px;
+    height: 40px;
+    display: grid;
+    justify-self: end;
+    cursor: pointer;
+    background: rgba(0, 0, 0, 0);
+    align-self: flex-start
+
+}
+
+.leftright {
+    height: 2.5px;
+    width: 30px;
+    position: absolute;
+    margin-top: 24px;
+    background-color: #F4A259;
+    border-radius: 2px;
+    transform: rotate(45deg);
+    transition: all 0.3s ease-in;
+}
+
+.rightleft {
+    height: 2.5px;
+    width: 30px;
+    position: absolute;
+    margin-top: 24px;
+    background-color: #F4A259;
+    border-radius: 2px;
+    transform: rotate(-45deg);
+    transition: all 0.3s ease-in;
+}
+
+.container label {
+    color: white;
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: 0.6em;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    transition: all 0.3s ease-in;
+    opacity: 0;
+}
+
+.close {
+    margin: 60px 0 0 5px;
+    z-index: 3;
+}
+
+.closeContainer:hover .leftright {
+    transform: rotate(-45deg);
+    background-color: #ffffff;
+}
+
+.closeContainer:hover .rightleft {
+    transform: rotate(45deg);
+    background-color: #ffffff;
+}
+
+.closeContainer:hover label {
+    opacity: 1;
+}
+.description img {
+    width: 342px;
+    height: 513px;
+    object-fit: cover;
+}

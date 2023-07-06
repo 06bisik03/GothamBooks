@@ -1,0 +1,42 @@
+.container {
+    display: grid;
+    grid-template-rows: 10% 90%;
+    box-sizing: border-box;
+    margin-top: 90px;
+
+}
+
+.products {
+    display: grid;
+    height: 80vh;
+        margin-top: 13px;
+}
+
+.productsAndPagination {
+    display: grid;
+    grid-template-rows: 45% 45% 5%;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    flex-direction: row;
+    grid-gap: 20px;
+    
+}
+.searchBar {
+    display: flex;
+    justify-items: center;
+
+}
+
+.mainContainer {
+
+
+    background: url('/public/ShopWelcomeImages/elfinalo.png');
+    background-size: cover;
+
+    position: relative;
+    height: 100vh;
+    width: 100%;
+    overflow: hidden;
+    padding: 0;
+    margin: 0px;
+
+}
